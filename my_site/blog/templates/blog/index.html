@@ -6,17 +6,11 @@
 {% endblock %}
 
 {% block css_files%}
+<link rel="stylesheet" href="{% static "blog/post.css" %}">
     <link rel="stylesheet" href="{% static "blog/index.css" %}">
 {% endblock%}
 
 {% block content %}
-    <header id="main-navigation">
-        <h1><a href="">Anunay's Blog</a></h1>
-        <nav>
-            <a href="">All posts</a>
-        </nav>
-    </header>
-
     <section id="welcome">
         <header>
             <img src="{% static 'blog/images/crab.jpg' %}" alt="Anunay - The Author Of This Blog">
@@ -29,21 +23,7 @@
         <h2>My Latest Thoughts</h2>
 
         <ul>
-            <li>
-                <article class="post">
-                    <a href="">
-                        <img src="{%static "blog/images/alps.jpg"%}" alt="Mountain Hiking" />
-                        <div class="post_content">
-                            <h3> Mountain Hiking </h3>
-                            <p>
-                                Exploring the serene mountains, breathing in the fresh air, and feeling the
-                                exhilaration of reaching new heights. Mountain hiking is not just an adventure; it's a
-                                journey of self-discovery.
-                            </p>
-                        </div>
-                    </a>
-                </article>
-            </li>
+                {% include "blog/includes/post.html" %}
         </ul>
     </section>
 
