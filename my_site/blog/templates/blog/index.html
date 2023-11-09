@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{%load static%}
+
+{% block title %}
+    My Blog
+{% endblock %}
+
+{% block css_files%}
+    <link rel="stylesheet" href="{% static "blog/index.css" %}">
+{% endblock%}
+
+{% block content %}
+    <header id="main-navigation">
+        <h1><a href="">Anunay's Blog</a></h1>
+        <nav>
+            <a href="">All posts</a>
+        </nav>
+    </header>
+
+    <section id="welcome">
+        <header>
+            <img src="" alt="Anunay - The Author Of This Blog">
+        </header>
+        <p> Welcome to my blog! I'm Anunay, and I love sharing my thoughts and experiences with you. </p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My Latest Thoughts</h2>
+
+        <ul>
+            <li>
+                <article class="post">
+                    <a href="">
+                        <img src="" alt="Mountain Hiking" />
+                        <div class="post_content">
+                            <h3> Mountain Hiking </h3>
+                            <p>
+                                Exploring the serene mountains, breathing in the fresh air, and feeling the
+                                exhilaration of reaching new heights. Mountain hiking is not just an adventure; it's a
+                                journey of self-discovery.
+                            </p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>What I do</h2>
+        <p>
+            I love skiing and basketball.
+        </p>
+        <p>
+            Stay tuned for more exciting content!
+        </p>
+    </section>
+{% endblock %}
